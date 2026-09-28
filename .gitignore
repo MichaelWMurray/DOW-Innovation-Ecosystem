@@ -216,3 +216,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# DoW chart generated files and release snapshots
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+output/
+reference/
+live_sheet_*.json
+dated_revision/*.json
+dated_revision/*.pdf
+dated_revision/*.svg
+dated_revision/*.png
+dated_revision/*.jpg
+*.zip
