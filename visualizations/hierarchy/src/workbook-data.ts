@@ -110,7 +110,7 @@ export function validateWorkbook([fundingSource, ledgerSource, extraSource, orga
     if (!expected.has(row[0]) || index.has(row[0])) throw Error('Funding by Organization contains an unknown or duplicate ID: ' + row[0]);
     index.set(row[0], {row,index:i+1});
   });
-  if (index.size !== expected.size) throw Error('Workbook organization rows are incomplete');
+  if (!index.size) throw Error('Funding by Organization has no organization rows');
 
   const peLevels = ['R2', 'R1-COMBINED-PROGRAM-ENVELOPE', 'R1-COMBINED-MANAGED-PROGRAM-ENVELOPE'];
   const projectLevels = ['R2A-PROJECT', 'R2A-PROJECT-RESIDUAL', 'R2A-PROGRAM', 'R3'];
@@ -137,22 +137,43 @@ export function validateWorkbook([fundingSource, ledgerSource, extraSource, orga
     const selectedAmount = amount(value);
     const residualLinks = envelopeActivity && amount(sourceValue) > selectedAmount
       ? overlaps.split(/[\s,;]+/).filter(Boolean) : [];
-    return [{id,pe,project,level,value:selectedAmount,orgId,activity,envelopeActivity,residualLinks}];
+    return [{ledgerRow:i + 1,id,pe,project,level,value:selectedAmount,orgId,activity,envelopeActivity,residualLinks}];
   });
   if (!selected.length) throw Error('Selected ledger is empty');
   const byOrg = grouped(selected, item => item.orgId);
   const originals = new Map(snapshot.funding.map(record => [record.orgId, record]));
+  const pendingSummaries: string[] = [];
   const funding = organizations.map(({id:orgId}) => {
     const record = originals.get(orgId);
-    const {row,index:rowNumber} = index.get(orgId)!;
-    const value = row[2]?.trim() ? amount(row[2]) : null;
-    if (!same(value ?? 0, sum((byOrg.get(orgId) ?? []).map(item => item.value)))) {
-      throw Error('Selected ledger does not reconcile for ' + orgId);
+    const summary = index.get(orgId);
+    const row = summary?.row ?? [];
+    const scopes = byOrg.get(orgId) ?? [];
+    const summaryAmount = row[2]?.trim() ? amount(row[2]) : null;
+    const ledgerTotal = rounded(sum(scopes.map(scope => scope.value)));
+    const useLedger = !summary || !same(summaryAmount ?? 0, ledgerTotal);
+    if (useLedger && summary) {
+      // Accept a lagging summary only when its count and dollars match an earlier
+      // prefix of this organization's selected scopes. Reject other discrepancies.
+      const count = Number(row[3] || 0);
+      const prefixTotal = sum(scopes.slice(0, count).map(scope => scope.value));
+      if (!Number.isInteger(count) || count < 0 || count >= scopes.length || !same(summaryAmount ?? 0, prefixTotal)) {
+        throw Error('Selected ledger does not reconcile for ' + orgId);
+      }
     }
-    return {basis:'request', confidence:null, evidenceRefs:[], fiscalYear:2026, overlapNote:null, ...record, orgId, amountMillionsDecimal: value === null ? null : String(value),
-      status: value === null ? 'no_supported_scope' : 'supported', scope: row[4] || record?.scope || '',
-      ba: row.slice(5,14).map(cell => cell ? amount(cell) : null),
-      sourceLocator: {fileId:workbookId, fingerprint:'', tab:'Funding by Organization', ...record?.sourceLocator, row:rowNumber}};
+    if (useLedger) pendingSummaries.push(orgId);
+    const value = useLedger ? (scopes.length ? ledgerTotal : null) : summaryAmount;
+    const ba = useLedger ? Array.from({length:9}, (_, i) => {
+      const matches = scopes.filter(scope => scope.activity === String(i + 1));
+      return matches.length ? rounded(sum(matches.map(scope => scope.value))) : null;
+    }) : row.slice(5,14).map(cell => cell ? amount(cell) : null);
+    const sourceLocator = useLedger
+      ? (scopes.length ? {fileId:workbookId, fingerprint:'', tab:'Selected Funding Ledger', row:scopes[0].ledgerRow} : null)
+      : {...record?.sourceLocator, fileId:workbookId, fingerprint:'', tab:'Funding by Organization', row:summary!.index};
+    return {basis:'request', confidence:null, evidenceRefs:[], fiscalYear:2026, overlapNote:null, ...record,
+      orgId, amountMillionsDecimal:value === null ? null : String(value), ba, sourceLocator,
+      status:value === null ? 'no_supported_scope' : 'supported',
+      scope:useLedger ? (scopes.length ? 'Selected Funding Ledger: ' + scopes.map(scope => scope.id).join(', ') : 'No selected ledger scope')
+        : row[4] || record?.scope || ''};
   });
 
   const children = grouped(organizations, org => org.parentId ?? '');
@@ -238,5 +259,5 @@ export function validateWorkbook([fundingSource, ledgerSource, extraSource, orga
       awardEvidence.set(orgId,records);
     }
   }
-  return {organizations,funding,rollups,supplemental,referenceFunding,awardEvidence};
+  return {organizations,funding,pendingSummaries,rollups,supplemental,referenceFunding,awardEvidence};
 }

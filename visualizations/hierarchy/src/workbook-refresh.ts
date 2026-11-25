@@ -37,7 +37,8 @@ export function refreshWorkbook() {
     referenceFunding = validated.referenceFunding;
     awardEvidence = validated.awardEvidence;
     const time = new Date().toLocaleTimeString(undefined, {hour:'numeric', minute:'2-digit'});
-    update({revision: status.revision + 1, loading: false, message: 'Workbook refreshed at ' + time});
+    const note = validated.pendingSummaries.length ? ' · Funding summary pending for ' + validated.pendingSummaries.join(', ') : '';
+    update({revision: status.revision + 1, loading: false, message: 'Workbook refreshed at ' + time + note});
   }).catch(error => {
     console.warn('Workbook refresh failed', error);
     update({...status, loading: false, message: 'Refresh failed. Showing last valid data. ' + (error instanceof Error ? error.message : '')});

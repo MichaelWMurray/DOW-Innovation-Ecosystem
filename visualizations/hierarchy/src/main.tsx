@@ -365,7 +365,7 @@ function App() {
             {amount?.status==='supported' && amount.scope && <p>{amount.scope}</p>}
             {amount?.overlapNote && <p>Overlapping organizations · {amount.overlapNote}</p>}
             <small>Published request scope attributed in the crosswalk. It may differ from the organization’s total budget or enacted funding. Parent and child figures must not be added.</small>
-            {amount?.sourceLocator && <a href={'https://docs.google.com/spreadsheets/d/'+amount.sourceLocator.fileId+'/edit#gid=1245809201&range=A'+amount.sourceLocator.row} target="_blank" rel="noreferrer">Funding workbook · row {amount.sourceLocator.row} ↗</a>}
+            {amount?.sourceLocator && <a href={'https://docs.google.com/spreadsheets/d/'+amount.sourceLocator.fileId+'/edit#gid='+(amount.sourceLocator.tab === 'Selected Funding Ledger' ? '1956591700' : '1245809201')+'&range=A'+amount.sourceLocator.row} target="_blank" rel="noreferrer">Funding workbook · row {amount.sourceLocator.row} ↗</a>}
             {approvedActivities.length > 0 && <details className="approvedActivities">
               <summary>Approved funding activities ({approvedActivities.length})</summary>
               <p>These program management attributions are included in the total above. They describe requested funding scope.</p>
