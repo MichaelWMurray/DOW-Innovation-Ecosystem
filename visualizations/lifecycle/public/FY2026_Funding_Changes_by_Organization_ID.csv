@@ -1,0 +1,424 @@
+organization_id,organization,version_8_legacy_rdte_m,current_legacy_rdte_m,reconciled_fy2026_rdte_m,change_vs_export,change_vs_current,plot_treatment
+IEORG-0001,United States Air Force (USAF),2744.603,2744.603,4.886,changed,changed,component only
+IEORG-0002,Air Force Life Cycle Management Center (AFLCMC),52.081,52.081,182.502,changed,changed,reconciled RDT&E
+IEORG-0003,Air Force Materiel Command (AFMC),1.0,1.0,,removed,removed,hidden
+IEORG-0004,Air Force Global Strike Command (AFGSC),,,,unchanged,unchanged,hidden
+IEORG-0005,Air Mobility Command (AMC),,,,unchanged,unchanged,hidden
+IEORG-0006,Army,,,5.33,added,added,component only
+IEORG-0007,Transformation and Training Command (T2COM),,,,unchanged,unchanged,hidden
+IEORG-0008,ASN(RDA),,,,unchanged,unchanged,hidden
+IEORG-0009,"Assistant Secretary of the Army for Acquisition, Logistics and Technology",0.0,0.0,,removed,removed,hidden
+IEORG-0010,CENTCOM,,,,unchanged,unchanged,hidden
+IEORG-0011,CYBERCOM,118.734,118.734,31.325,changed,changed,reconciled RDT&E
+IEORG-0012,75th U.S. Army Reserve Innovation Command (75th USARIC),,,,unchanged,unchanged,hidden
+IEORG-0013,Acquisition Innovation Research Center,,,,unchanged,unchanged,hidden
+IEORG-0014,Acquisition Research Program at Naval Postgraduate School,,,,unchanged,unchanged,hidden
+IEORG-0015,Aerospace Corporation,,,188.339,added,added,reconciled RDT&E
+IEORG-0016,Advanced Functional Fabrics of America (AFFOA),6.288,6.288,6.288,unchanged,unchanged,reconciled RDT&E
+IEORG-0017,AFLCMC Consortium Initiative (ACI),,,,unchanged,unchanged,hidden
+IEORG-0018,AFLCMC Propulsion Consortium Initiative (PCI 2.0),,,,unchanged,unchanged,hidden
+IEORG-0019,AFRL Open Technology and Agility for Innovation (OTAFI),,,,unchanged,unchanged,hidden
+IEORG-0020,AFWERX,18.499,18.499,18.499,unchanged,unchanged,reconciled RDT&E
+IEORG-0021,American Institute for Manufacturing Integrated Photonics (AIM Photonics),15.542,15.542,15.542,unchanged,unchanged,reconciled RDT&E
+IEORG-0022,Department of the Air Force Rapid Capabilities Office (DAF RCO),,,,unchanged,unchanged,hidden
+IEORG-0023,Rapid Sustainment Office (RSO),,,32.666,added,added,reconciled RDT&E
+IEORG-0024,Air Force Research Laboratory (AFRL),2076.131,2076.131,576.245,changed,changed,reconciled RDT&E
+IEORG-0025,Air Force Research Laboratory - New Mexico Tech Engagement Office,,,,unchanged,unchanged,hidden
+IEORG-0026,America Makes,43.731,43.731,43.731,unchanged,unchanged,reconciled RDT&E
+IEORG-0027,American Metalcasting Consortium,,,,unchanged,unchanged,hidden
+IEORG-0028,Applied Physics Laboratory (JHU),,,381.893,added,added,reconciled RDT&E
+IEORG-0029,Applied Physics Laboratory (UW),,,5.32,added,added,reconciled RDT&E
+IEORG-0030,Applied Research Laboratories (UT),,,14.601,added,added,reconciled RDT&E
+IEORG-0031,Applied Research Laboratory (PSU),,,18.38,added,added,reconciled RDT&E
+IEORG-0032,Applied Research Laboratory (UH),,,,unchanged,unchanged,hidden
+IEORG-0033,Applied Research Laboratory for Intelligence and Security (ARLIS),,,1.1,added,added,reconciled RDT&E
+IEORG-0034,ARCWERX,,,,unchanged,unchanged,hidden
+IEORG-0035,Advanced Robotics for Manufacturing (ARM),10.82,10.82,10.82,unchanged,unchanged,reconciled RDT&E
+IEORG-0036,Army Applications Laboratory,,,,unchanged,unchanged,hidden
+IEORG-0037,Army Expeditionary Technology Search (xTech),,,6.194,added,added,reconciled RDT&E
+IEORG-0038,DASD (TRAC),,,,unchanged,unchanged,hidden
+IEORG-0039,Army Research Institute for Behavioral and Social Sciences,,,7.352,added,added,reconciled RDT&E
+IEORG-0040,Army SBIR/STTR Program,,,,unchanged,unchanged,hidden
+IEORG-0041,Aviation & Missile Technology Consortium,,,,unchanged,unchanged,hidden
+IEORG-0042,Basic Research Innovation Collaboration Center (BRICC),,,,unchanged,unchanged,hidden
+IEORG-0043,Battery Innovation Center,,,,unchanged,unchanged,hidden
+IEORG-0044,Advanced Tissue Biofabrication Institute (Biofabusa),,,10.775,added,added,reconciled RDT&E
+IEORG-0045,Bioindustrial Manufacturing and Design Ecosystem (BioMADE),18.432,18.432,18.432,unchanged,unchanged,reconciled RDT&E
+IEORG-0046,Black Pearl,,,,unchanged,unchanged,hidden
+IEORG-0047,Business and Enterprise Systems Product Innovation (BESPIN),,,0.079,added,added,reconciled RDT&E
+IEORG-0048,Catalyst Campus for Technology and Innovation (CCTI),,,0.25,added,added,reconciled RDT&E
+IEORG-0049,Center for Naval Analyses,,,31.76,added,added,reconciled RDT&E
+IEORG-0050,Chief Digital and Artificial Intelligence Office (CDAO),9.196,9.196,9.196,unchanged,unchanged,reconciled RDT&E
+IEORG-0051,Cloud One,,,,unchanged,unchanged,hidden
+IEORG-0052,Combat Capabilities Development Command (DEVCOM),0.93,0.93,126.091,changed,changed,reconciled RDT&E
+IEORG-0053,Commerical Technologies for Maintenance Activities (CTMA),3.6,3.6,,removed,removed,hidden
+IEORG-0054,"Consortium for Command, Control, and Communications in Cyberspace (C5)",,,,unchanged,unchanged,hidden
+IEORG-0055,"Consortium for Energy, Environment, and Demilitarization (CEED)",,,,unchanged,unchanged,hidden
+IEORG-0056,Cornerstone Consortium,,,,unchanged,unchanged,hidden
+IEORG-0057,Corsair Ranch,,,,unchanged,unchanged,hidden
+IEORG-0058,Countering Weapons of Mass Destruction Consortium (CWMD),,,,unchanged,unchanged,hidden
+IEORG-0059,Cyber Fusion Innovation Center (CFIC),,,,unchanged,unchanged,hidden
+IEORG-0060,Cyber Innovation Center,,,,unchanged,unchanged,hidden
+IEORG-0061,Cyberspace Operations Broad Responsive Agreement (COBRA),,,,unchanged,unchanged,hidden
+IEORG-0062,CYBERWORX,,,,unchanged,unchanged,hidden
+IEORG-0063,DAF Digital Transformation Office,,,,unchanged,unchanged,hidden
+IEORG-0064,Defense Advanced Research Projects Agency (DARPA),4565.795,4565.795,4567.795,changed,changed,reconciled RDT&E
+IEORG-0065,Defense Automotive Technologies Consortium (DATC),,,,unchanged,unchanged,hidden
+IEORG-0066,Assistant Secretary of War for Science & Technology (ASW(S&T)),,,,unchanged,unchanged,hidden
+IEORG-0067,Defense Innovation Unit (DIU),57.547,57.547,74.084,changed,changed,reconciled RDT&E
+IEORG-0068,Manufacturing Innovation Institutes (MII),,,,unchanged,unchanged,hidden
+IEORG-0069,Defense Microelectronics Activity,135.016,135.016,136.346,changed,changed,reconciled RDT&E
+IEORG-0070,"Science, Technology and Innovation Board (STIB)",,,,unchanged,unchanged,hidden
+IEORG-0071,DefenseWERX,,,1.398,added,added,reconciled RDT&E
+IEORG-0072,Transformation Decision Analysis Center (TDAC),,,42.452,added,added,reconciled RDT&E
+IEORG-0073,DEVCOM Armaments Center,249.455,249.455,212.784,changed,changed,reconciled RDT&E
+IEORG-0074,DEVCOM Army Research Laboratory,172.463,172.463,387.772,changed,changed,reconciled RDT&E
+IEORG-0075,DEVCOM Aviation and Missile Center,28.893,28.893,568.936,changed,changed,reconciled RDT&E
+IEORG-0076,DEVCOM Chemical Biological Center,8.209,8.209,41.132,changed,changed,reconciled RDT&E
+IEORG-0077,"DEVCOM Command, Control, Communications, Computers, Cyber, Intelligence, Surveillance and Reconnaissance Center",229.043,229.043,405.394,changed,changed,reconciled RDT&E
+IEORG-0078,DEVCOM Ground Vehicle Systems Center,73.26,73.26,108.444,changed,changed,reconciled RDT&E
+IEORG-0079,DEVCOM Soldier Center,2.0,2.0,103.031,changed,changed,reconciled RDT&E
+IEORG-0080,"Developmental Test, Evaluation and Assessments (DTE&A)",37.381,37.381,,removed,removed,hidden
+IEORG-0081,DoW Ordnance Technology Consortium,,,,unchanged,unchanged,hidden
+IEORG-0082,Doolittle Institute,,,,unchanged,unchanged,hidden
+IEORG-0083,EAGLEWERX,,,,unchanged,unchanged,hidden
+IEORG-0084,Energetics Technology Center,,,,unchanged,unchanged,hidden
+IEORG-0085,Engineer Research and Development Center (ERDC),363.794,363.794,123.595,changed,changed,reconciled RDT&E
+IEORG-0086,Engineer Research and Development Center Consortium,,,,unchanged,unchanged,hidden
+IEORG-0087,ERDCWERX,,,,unchanged,unchanged,hidden
+IEORG-0088,FATHOMWERX,,,,unchanged,unchanged,hidden
+IEORG-0089,FirePoint Innovations Center,,,,unchanged,unchanged,hidden
+IEORG-0090,Forging War Manufacturing Consortium (FDMC),,,,unchanged,unchanged,hidden
+IEORG-0091,Geophysical Detection of Nuclear Proliferation,,,,unchanged,unchanged,hidden
+IEORG-0092,Georgia Tech Research Institute (GTRI),,,24.414,added,added,reconciled RDT&E
+IEORG-0093,Hawaii Technology Development Corporation,,,,unchanged,unchanged,hidden
+IEORG-0094,Hyperspace Challenge,,,,unchanged,unchanged,hidden
+IEORG-0095,IDA Center for Communications and Computing (CCC),,,,unchanged,unchanged,hidden
+IEORG-0096,IDA Systems and Analyses Center,,,,unchanged,unchanged,hidden
+IEORG-0097,Applied Research Institute (ARI),,,4.25,added,added,reconciled RDT&E
+IEORG-0098,Information Warfare Research Project (IWRP),,,,unchanged,unchanged,hidden
+IEORG-0099,Innovare Advancement Center,,,,unchanged,unchanged,hidden
+IEORG-0100,Innovation Accelerator Foundation,,,,unchanged,unchanged,hidden
+IEORG-0101,Institute for Collaborative Biotechnologies (UCSB),,,4.201,added,added,reconciled RDT&E
+IEORG-0102,Institute for Creative Technologies (USC),,,4.271,added,added,reconciled RDT&E
+IEORG-0103,Institute for Soldier Nanotechnologies,,,4.759,added,added,reconciled RDT&E
+IEORG-0104,Capability Development and Innovation (CD&I),,,,unchanged,unchanged,hidden
+IEORG-0105,Joint Hypersonics Transition Office (JHTO),23.582,23.582,,removed,removed,hidden
+IEORG-0106,Joint Rapid Acquisition Cell,,,,unchanged,unchanged,hidden
+IEORG-0107,Joint Warfare Analysis Center (JWAC),,,,unchanged,unchanged,hidden
+IEORG-0108,Kobayashi Maru (KM),,,3.228,added,added,reconciled RDT&E
+IEORG-0109,Lift: Connecting Technology and Talent,,,10.512,added,added,reconciled RDT&E
+IEORG-0110,MIT Lincoln Laboratory,11.479,11.479,73.592,changed,changed,reconciled RDT&E
+IEORG-0111,MxD (Manufacturing x Digital),,,12.563,added,added,reconciled RDT&E
+IEORG-0112,Marine Corps Systems Command (MARCORSYSCOM),,,61.598,added,added,reconciled RDT&E
+IEORG-0113,Marine Corps Warfighting Laboratory/Futures Directorate (MCWL/FD),,,218.206,added,added,reconciled RDT&E
+IEORG-0114,Marine Innovation Unit (MIU),,,,unchanged,unchanged,hidden
+IEORG-0115,Maritime Sustainment Technology and Innovation Consortium (MSTIC),,,,unchanged,unchanged,hidden
+IEORG-0116,Maryland Technology Development Corporation,,,,unchanged,unchanged,hidden
+IEORG-0117,Massachusetts National Guard Innovation Team (MANGIT),,,,unchanged,unchanged,hidden
+IEORG-0118,Marine Corps Warfighting Laboratory Experiment Division (EXDIV),,,,unchanged,unchanged,hidden
+IEORG-0119,Marine Corps Warfighting Laboratory Science and Technology Division (S&T),,,,unchanged,unchanged,hidden
+IEORG-0120,Marine Corps Warfighting Laboratory Rapid Capabilities Office (MCRCO),,,16.316,added,added,reconciled RDT&E
+IEORG-0121,Marine Corps Warfighting Laboratory Future Technology Office (FTO),,,,unchanged,unchanged,hidden
+IEORG-0122,Marine Corps Warfighting Laboratory Office of Science and Technology Integration (OSTI),,,,unchanged,unchanged,hidden
+IEORG-0123,Marine Corps Warfighting Laboratory Current Technology Office (CTO),,,,unchanged,unchanged,hidden
+IEORG-0124,Marine Corps Warfighting Laboratory Wargaming Division (WGD),,,,unchanged,unchanged,hidden
+IEORG-0125,Medical CBRN Defense Consortium (MCDC),,,,unchanged,unchanged,hidden
+IEORG-0126,U.S. Army Medical Research and Development Command (MRDC),,,2.87,added,added,reconciled RDT&E
+IEORG-0127,Medical Technology Enterprise Consortium (MTEC),,,,unchanged,unchanged,hidden
+IEORG-0128,Kelly Johnson Joint All-Domain Innovation Center (KJJADIC),,,,unchanged,unchanged,hidden
+IEORG-0129,MilTech,,,,unchanged,unchanged,hidden
+IEORG-0130,Missile Defense Agency (MDA),7435.156,7435.156,7971.078,changed,changed,reconciled RDT&E
+IEORG-0131,"Mississippi Enterprise for Technology, Inc",,,,unchanged,unchanged,hidden
+IEORG-0132,National Advanced Mobility Consortium,,,,unchanged,unchanged,hidden
+IEORG-0133,National Armaments Consortium (NAC),,,,unchanged,unchanged,hidden
+IEORG-0134,National Defense Research Institute (NDRI),,,,unchanged,unchanged,hidden
+IEORG-0135,National Geospatial-Intelligence Agency OTA Consortium (NGA OTA),,,,unchanged,unchanged,hidden
+IEORG-0136,National Security Engineering Center (NSEC),,,,unchanged,unchanged,hidden
+IEORG-0137,National Security Innovation Capital (NSIC),1.395,1.395,,removed,removed,hidden
+IEORG-0138,National Spectrum Consortium (NSC),,,,unchanged,unchanged,hidden
+IEORG-0139,National Strategic Research Institute (NSRI),,,0.6,added,added,reconciled RDT&E
+IEORG-0140,Defense Logistics Agency,148.638,148.638,253.32,changed,changed,reconciled RDT&E
+IEORG-0141,Naval Air Warfare Center Weapons Division,,,605.254,added,added,reconciled RDT&E
+IEORG-0142,Naval Air Warfare Center Aircraft Division (NAWCAD),599.245,599.245,1085.995,changed,changed,reconciled RDT&E
+IEORG-0143,Naval Aviation Systems Consortium (NASC),,,,unchanged,unchanged,hidden
+IEORG-0144,Naval Energetic Systems and Technologies (NEST),,,,unchanged,unchanged,hidden
+IEORG-0145,Naval Facilities Engineering and Expeditionary Warfare Center (NAVFAC EXWC),,,13.601,added,added,reconciled RDT&E
+IEORG-0146,Naval Information Warfare Center Atlantic (NIWC Atlantic),,,83.401,added,added,reconciled RDT&E
+IEORG-0147,Naval Information Warfare Center Pacific (NIWC Pacific),,,179.01,added,added,reconciled RDT&E
+IEORG-0148,Naval Medicine Research and Development Command (NMRDC),,,,unchanged,unchanged,hidden
+IEORG-0149,Naval Postgraduate School,12.92,12.92,1.947,changed,changed,reconciled RDT&E
+IEORG-0150,Naval Research Laboratory,36.431,36.431,92.207,changed,changed,reconciled RDT&E
+IEORG-0151,Naval Surface Warfare Center (NSWC),7.267,7.267,65.233,changed,changed,reconciled RDT&E
+IEORG-0152,Naval Surface Technology and Innovation Consortium (NSTIC),,,,unchanged,unchanged,hidden
+IEORG-0153,Naval Undersea Warfare Center (NUWC),,,4.051,added,added,reconciled RDT&E
+IEORG-0154,AIRWorks,,,,unchanged,unchanged,hidden
+IEORG-0155,Navy SBIR/STTR,,,,unchanged,unchanged,hidden
+IEORG-0156,Navy Warfare Development Center (NWDC),,,12.585,added,added,reconciled RDT&E
+IEORG-0157,New York State Technology Enterprise Corporation,,,,unchanged,unchanged,hidden
+IEORG-0158,America's Flexible Hybrid Electronics Institute (Nextflex),,,9.416,added,added,reconciled RDT&E
+IEORG-0159,NineTwelve Institute,,,,unchanged,unchanged,hidden
+IEORG-0160,Office of Naval Research,403.843,403.843,139.749,changed,changed,reconciled RDT&E
+IEORG-0161,Office of Naval Research - Global,,,22.727,added,added,reconciled RDT&E
+IEORG-0162,Office of Small Business Programs (OSBP),,,,unchanged,unchanged,hidden
+IEORG-0163,Platform One (P1),95.38,95.38,95.38,unchanged,unchanged,reconciled RDT&E
+IEORG-0164,Purdue Foundry,,,,unchanged,unchanged,hidden
+IEORG-0165,Q Station,,,,unchanged,unchanged,hidden
+IEORG-0166,RAND Arroyo Center,10.892,10.892,10.892,unchanged,unchanged,reconciled RDT&E
+IEORG-0167,RAND Project AIR FORCE (PAF),,,32.405,added,added,reconciled RDT&E
+IEORG-0168,RTI Innovation Advisors,,,,unchanged,unchanged,hidden
+IEORG-0169,"Sensors, Communications, and Electronics Consortium (SCEC)",,,,unchanged,unchanged,hidden
+IEORG-0170,Small Business Innovation Research - Small Business Technology Transfer (SBIR/STTR),,,,unchanged,unchanged,hidden
+IEORG-0171,"Special Operations Forces Acquisition, Technology, and Logistics Science & Technology Directorate (SOF AT&L-ST)",,,,unchanged,unchanged,hidden
+IEORG-0172,Software Engineering Institute (SEI),21.855,21.855,24.055,changed,changed,reconciled RDT&E
+IEORG-0173,Army Software Factory,,,,unchanged,unchanged,hidden
+IEORG-0174,SOFWERX,,,,unchanged,unchanged,hidden
+IEORG-0175,South Carolina Research Authority,,,,unchanged,unchanged,hidden
+IEORG-0176,Space and Missile Defense Command Technical Center (SMDTC),,,41.479,added,added,reconciled RDT&E
+IEORG-0177,Orbital Labs,,,,unchanged,unchanged,hidden
+IEORG-0178,Space Development Agency (SDA),3525.313,3525.313,,removed,removed,hidden
+IEORG-0179,Space Dynamics Laboratory (SDL),,,19.02,added,added,reconciled RDT&E
+IEORG-0180,Space Enterprise Consortium (SpEC),,,,unchanged,unchanged,hidden
+IEORG-0181,Space Rapid Capabilities Office (SpRCO),,,9.664,added,added,reconciled RDT&E
+IEORG-0182,"HQDA G-1, Personnel",,,,unchanged,unchanged,hidden
+IEORG-0183,SpaceWERX,,,,unchanged,unchanged,hidden
+IEORG-0184,"Special Operations Forces Acquisition, Technology, and Logistics Center (SOF AT&L)",,,,unchanged,unchanged,hidden
+IEORG-0185,Strategic & Spectrum Missions Advanced Resilient Trusted Systems,,,,unchanged,unchanged,hidden
+IEORG-0186,Strategic Capabilities Office (SCO),806.909,806.909,93.147,changed,changed,reconciled RDT&E
+IEORG-0187,STRIKEWERX,,,,unchanged,unchanged,hidden
+IEORG-0188,Supply Chain Consortium Initiative (SCCI),,,,unchanged,unchanged,hidden
+IEORG-0189,Systems Engineering Research Center (SERC),,,,unchanged,unchanged,hidden
+IEORG-0190,TechLink,,,3.558,added,added,reconciled RDT&E
+IEORG-0191,Tesseract,,,,unchanged,unchanged,hidden
+IEORG-0192,Test Resource Management Center (TRMC),1095.772,1095.772,,removed,removed,hidden
+IEORG-0193,Texas Military Department Joint Innovation Unit (TMDx),,,,unchanged,unchanged,hidden
+IEORG-0194,Academic Partnership Engagement Experiment (APEX),,,,unchanged,unchanged,hidden
+IEORG-0195,The Catalyst Accelerator,,,,unchanged,unchanged,hidden
+IEORG-0196,Griffiss Institute (GI),,,,unchanged,unchanged,hidden
+IEORG-0197,The Naval Postgraduate School - Joint Interagency Field Experimentation Program,,,,unchanged,unchanged,hidden
+IEORG-0198,Office of the Chief Software Officer (CSO),,,,unchanged,unchanged,hidden
+IEORG-0199,The Patuxent Partnership,,,,unchanged,unchanged,hidden
+IEORG-0200,Training and Readiness Accelerator II (TReX II),,,,unchanged,unchanged,hidden
+IEORG-0201,"U.S. Transportation Command Research, Development, Test & Evaluation (RDT&E) Program",,,,unchanged,unchanged,hidden
+IEORG-0202,TRON,,,,unchanged,unchanged,hidden
+IEORG-0203,Undersea Technology Innovation Consortium (UTIC),,,,unchanged,unchanged,hidden
+IEORG-0204,University Consortium for Applied Hypersonics (UCAH),27.416,27.416,27.416,unchanged,unchanged,reconciled RDT&E
+IEORG-0205,Vertical Lift Consortium (VLC),,,,unchanged,unchanged,hidden
+IEORG-0206,Virginia Tech Applied Research Corporation,,,,unchanged,unchanged,hidden
+IEORG-0207,Naval Shipbuilding and Advanced Manufacturing Center (NSAM),,,,unchanged,unchanged,hidden
+IEORG-0208,Center for Naval Metalworking,,,,unchanged,unchanged,hidden
+IEORG-0209,Composites Manufacturing Technology Center,,,,unchanged,unchanged,hidden
+IEORG-0210,Energetics Manufacturing Technology Center,,,,unchanged,unchanged,hidden
+IEORG-0211,Electro-Optics Center,,,,unchanged,unchanged,hidden
+IEORG-0212,Institute for Manufacturing and Sustainment Technologies,,,,unchanged,unchanged,hidden
+IEORG-0213,Artificial Intelligence Integration Center,,,30.042,added,added,reconciled RDT&E
+IEORG-0214,DLA J68 Research & Development,70.25,70.25,,removed,removed,hidden
+IEORG-0215,INDOPACOM,204.701,204.701,31.674,changed,changed,reconciled RDT&E
+IEORG-0216,NSWC Carderock,,,233.717,added,added,reconciled RDT&E
+IEORG-0217,NSWC Corona,,,55.43,added,added,reconciled RDT&E
+IEORG-0218,NSWC Crane,,,183.024,added,added,reconciled RDT&E
+IEORG-0219,NSWC Dahlgren,,,444.669,added,added,reconciled RDT&E
+IEORG-0220,NSWC Indian Head,,,51.379,added,added,reconciled RDT&E
+IEORG-0221,NSWC Panama City,,,68.573,added,added,reconciled RDT&E
+IEORG-0222,NSWC Philadelphia,,,105.314,added,added,reconciled RDT&E
+IEORG-0223,NSWC Port Hueneme,,,103.858,added,added,reconciled RDT&E
+IEORG-0224,NUWC Keyport,,,44.096,added,added,reconciled RDT&E
+IEORG-0225,NUWC Newport,,,374.107,added,added,reconciled RDT&E
+IEORG-0226,CTO Action Group (CAG),,,,unchanged,unchanged,hidden
+IEORG-0227,"Capability Program Executive for Chemical, Biological, Radiological and Nuclear Defense (CPE CBRND)",,,,unchanged,unchanged,hidden
+IEORG-0228,Joint Staff (JS),318.802,318.802,232.29,changed,changed,reconciled RDT&E
+IEORG-0229,ManTech,,,114.513,added,added,reconciled RDT&E
+IEORG-0230,United States Marine Corps (USMC),34.654,34.654,,removed,removed,component only
+IEORG-0231,National Guard Bureau (NGB),,,,unchanged,unchanged,hidden
+IEORG-0232,Naval Air Systems Command (NAVAIR),16.441,16.441,39.792,changed,changed,reconciled RDT&E
+IEORG-0233,Naval Facilities Engineering Systems Command (NAVFAC),8.603,8.603,2.881,changed,changed,reconciled RDT&E
+IEORG-0234,Naval Information Warfare Systems Command (NAVWAR),2.497,2.497,14.574,changed,changed,reconciled RDT&E
+IEORG-0235,Naval Sea Systems Command (NAVSEA),54.392,54.392,67.748,changed,changed,reconciled RDT&E
+IEORG-0236,Navy,,,3.5,added,added,component only
+IEORG-0237,Naval Air Warfare Center Training Systems Division (NAWCTSD),,,24.144,added,added,reconciled RDT&E
+IEORG-0238,OASW(NCB),,,,unchanged,unchanged,hidden
+IEORG-0239,"Office of the Assistant Secretary of the Air Force for Acquisition, Technology and Logistics (SAF/AQ)",,,,unchanged,unchanged,hidden
+IEORG-0240,Secretary of War,,,,unchanged,unchanged,hidden
+IEORG-0241,SOCOM,,,1110.678,added,added,reconciled RDT&E
+IEORG-0242,United States Space Force (USSF),63.651,63.651,0.211,changed,changed,component only
+IEORG-0243,Space Systems Command (SSC),305.484,305.484,392.679,changed,changed,reconciled RDT&E
+IEORG-0244,SPACECOM,,,,unchanged,unchanged,hidden
+IEORG-0245,STRATCOM,0.335,0.335,22.925,changed,changed,reconciled RDT&E
+IEORG-0246,Georgia Tech Applied Research Corporation (GTARC),,,2.249,added,added,reconciled RDT&E
+IEORG-0247,TRANSCOM,,,7.421,added,added,reconciled RDT&E
+IEORG-0248,United States Army Space and Missile Defense Command,,,50.022,added,added,reconciled RDT&E
+IEORG-0249,U.S. Army Corps of Engineers (USACE),,,5.745,added,added,reconciled RDT&E
+IEORG-0250,USW(A&S),,,,unchanged,unchanged,hidden
+IEORG-0251,NewSpace Nexus,,,,unchanged,unchanged,hidden
+IEORG-0252,Technology Advancement Center (TAC),,,,unchanged,unchanged,hidden
+IEORG-0253,Missouri Technology Corporation,,,,unchanged,unchanged,hidden
+IEORG-0254,Under Secretary of War for Intelligence & Security (USW(I&S)),,,,unchanged,unchanged,hidden
+IEORG-0255,309th Software Engineering Group (309 SWEG),,,135.717,added,added,reconciled RDT&E
+IEORG-0256,Under Secretary of War for Policy (USW(P)),,,,unchanged,unchanged,hidden
+IEORG-0257,Black Label,,,,unchanged,unchanged,hidden
+IEORG-0258,76th Software Engineering Group (76 SWEG),,,7.051,added,added,reconciled RDT&E
+IEORG-0259,Under Secretary of War for Research and Engineering (USW(R&E)),,,,unchanged,unchanged,hidden
+IEORG-0260,402nd Software Engineering Group (402 SWEG),,,,unchanged,unchanged,hidden
+IEORG-0261,Advanced Technology International (ATI),,,,unchanged,unchanged,hidden
+IEORG-0262,Texas A&M Engineering Experiment Station (TEES),,,,unchanged,unchanged,hidden
+IEORG-0263,National Security Technology Accelerator (NSTXL),,,,unchanged,unchanged,hidden
+IEORG-0264,SOSSEC,,,,unchanged,unchanged,hidden
+IEORG-0265,Consortium Management Group (CMG),,,,unchanged,unchanged,hidden
+IEORG-0266,SAE Industry Technologies Consortia,,,,unchanged,unchanged,hidden
+IEORG-0267,EUCOM,,,,unchanged,unchanged,hidden
+IEORG-0268,Microelectronics Commons,446.261,446.261,400.0,changed,changed,reconciled RDT&E
+IEORG-0269,Tradewind,,,,unchanged,unchanged,hidden
+IEORG-0270,APEX Accelerators,,,,unchanged,unchanged,hidden
+IEORG-0271,Department of the Air Force–MIT Artificial Intelligence Accelerator (DAF–MIT AI Accelerator),,,,unchanged,unchanged,hidden
+IEORG-0272,National Geospatial-Intelligence Agency (NGA),,,0.397,added,added,reconciled RDT&E
+IEORG-0273,Marne Innovation and Technology Center,,,,unchanged,unchanged,hidden
+IEORG-0274,3rd Infantry Division,,,,unchanged,unchanged,hidden
+IEORG-0275,U.S. Army Western Hemisphere Command,,,,unchanged,unchanged,hidden
+IEORG-0276,Overmatch Software Armory,9.862,9.862,,removed,removed,hidden
+IEORG-0277,Research Institute for Tactical Autonomy (RITA),,,,unchanged,unchanged,hidden
+IEORG-0278,National Shipbuilding Research Program (NSRP),,,,unchanged,unchanged,hidden
+IEORG-0279,Defense Innovation Accelerator for the North Atlantic (DIANA),35.761,35.761,35.761,unchanged,unchanged,reconciled RDT&E
+IEORG-0280,Defense Counterintelligence and Security Agency (DCSA),64.24,64.24,64.24,unchanged,unchanged,reconciled RDT&E
+IEORG-0281,Laboratory for Telecommunication Sciences (LTS),,,,unchanged,unchanged,hidden
+IEORG-0282,Defense Intelligence Agency (DIA),,,1.899,added,added,reconciled RDT&E
+IEORG-0283,National Reconnaissance Office (NRO),,,1.891,added,added,reconciled RDT&E
+IEORG-0284,National Security Agency Cybersecurity Directorate (CSD),,,,unchanged,unchanged,hidden
+IEORG-0285,Marine Corps Software Factory (MCSWF),,,,unchanged,unchanged,hidden
+IEORG-0286,Central Florida Tech Grove,,,,unchanged,unchanged,hidden
+IEORG-0287,National Security Agency Cybersecurity Collaboration Center (CCC),,,,unchanged,unchanged,hidden
+IEORG-0288,Laboratory for Advanced Cybersecurity Research (LACR),,,,unchanged,unchanged,hidden
+IEORG-0289,Laboratory for Physical Sciences (LPS),,,,unchanged,unchanged,hidden
+IEORG-0290,Laboratory for Analytic Sciences (LAS),,,,unchanged,unchanged,hidden
+IEORG-0291,National Security Agency (NSA),19.875,19.875,7.716,changed,changed,reconciled RDT&E
+IEORG-0292,Assistant Secretary of War for Mission Capabilities (ASW(MC)),,,,unchanged,unchanged,hidden
+IEORG-0293,Foreign Comparative Testing (FCT),,,27.958,added,added,reconciled RDT&E
+IEORG-0294,Office of Strategic Capital (OSC),0.382,0.382,0.382,unchanged,unchanged,reconciled RDT&E
+IEORG-0295,New Jersey Innovation Institute (NJII),,,,unchanged,unchanged,hidden
+IEORG-0296,New Jersey Manufacturing Extension Program,,,,unchanged,unchanged,hidden
+IEORG-0297,National Security Innovation Council (NSIC),,,,unchanged,unchanged,hidden
+IEORG-0298,Pathway for Innovation and Technology (PIT),,,,unchanged,unchanged,hidden
+IEORG-0299,Army FUZE,,,,unchanged,unchanged,hidden
+IEORG-0300,Lt. Gen. James M. Gavin Joint Innovation Outpost (JIOP),,,,unchanged,unchanged,hidden
+IEORG-0301,Army’s Global Tactical Edge Acquisition Directorate (G-TEAD),,,,unchanged,unchanged,hidden
+IEORG-0302,Army ManTech,,,67.002,added,added,reconciled RDT&E
+IEORG-0303,Technology Maturation Initiative (TMI),,,,unchanged,unchanged,hidden
+IEORG-0304,Defense Industrial Base Consortium (DIBC),,,,unchanged,unchanged,hidden
+IEORG-0305,Mach5,,,,unchanged,unchanged,hidden
+IEORG-0306,Unified Platform (UP),,,74.062,added,added,reconciled RDT&E
+IEORG-0307,SciTechConnect,,,,unchanged,unchanged,hidden
+IEORG-0308,Air Force Operational Energy (SAF/IEN),,,,unchanged,unchanged,hidden
+IEORG-0309,Defense Innovation On-Ramp Hubs,,,,unchanged,unchanged,hidden
+IEORG-0310,Maryland Energetics Innovation Hub (MEIH),,,,unchanged,unchanged,hidden
+IEORG-0311,On‑Ramp Hub – Phoenix (ORH‑PHX),,,,unchanged,unchanged,hidden
+IEORG-0312,On‑Ramp Hub – Dayton (ORH‑DAY),,,,unchanged,unchanged,hidden
+IEORG-0313,On‑Ramp Hub – Honolulu (ORH‑HNL),,,,unchanged,unchanged,hidden
+IEORG-0314,On‑Ramp Hub – Seattle (ORH‑SEA),,,,unchanged,unchanged,hidden
+IEORG-0315,On‑Ramp Hub – Wichita (ORH‑ICT),,,,unchanged,unchanged,hidden
+IEORG-0316,On‑Ramp Hub – Kentucky (ORH‑KY),,,,unchanged,unchanged,hidden
+IEORG-0317,On‑Ramp Hub – Minnesota (ORH‑MN),,,,unchanged,unchanged,hidden
+IEORG-0318,On‑Ramp Hub – Montana (ORH‑MT),,,,unchanged,unchanged,hidden
+IEORG-0319,Industrial Base Policy (IBP),,,,unchanged,unchanged,hidden
+IEORG-0320,"Assistant Secretary of the Air Force for Energy, Installations, and Environment (SAF/IE)",,,,unchanged,unchanged,hidden
+IEORG-0321,Department of the Navy Rapid Capabilities Office,,,,unchanged,unchanged,hidden
+IEORG-0322,Navy Innovation Unit,,,,unchanged,unchanged,hidden
+IEORG-0323,Deputy Secretary of War,,,,unchanged,unchanged,hidden
+IEORG-0324,Joint Interagency Task Force 401,,,,unchanged,unchanged,hidden
+IEORG-0325,Assistant Secretary of War for Critical Technologies (ASW(CT)),,,,unchanged,unchanged,hidden
+IEORG-0326,California Defense Ready Electronics and Microdevices Superhub (CA DREAMS),,,,unchanged,unchanged,hidden
+IEORG-0327,Commercial Leap Ahead for Wide Bandgap Semiconductors Hub (CLAWS),,,,unchanged,unchanged,hidden
+IEORG-0328,Midwest Microelectronics Consortium Hub (MMEC),,,,unchanged,unchanged,hidden
+IEORG-0329,Northeast Microelectronics Coalition Hub (NEMC),,,,unchanged,unchanged,hidden
+IEORG-0330,Northeast Regional Defense Technology Hub (NORDTECH),,,,unchanged,unchanged,hidden
+IEORG-0331,California-Pacific-Northwest AI Hardware Hub (Northwest-AI-Hub),,,,unchanged,unchanged,hidden
+IEORG-0332,Silicon Crossroads Microelectronics Commons Hub (SCMC),,,,unchanged,unchanged,hidden
+IEORG-0333,Southwest Advanced Prototyping Hub (SWAP),,,,unchanged,unchanged,hidden
+IEORG-0334,Accelerate the Procurement and Fielding of Innovative Technologies (APFIT),,,,unchanged,unchanged,credit or procurement only
+IEORG-0335,Mission Engineering and Integration Activity (MEIA),,,,unchanged,unchanged,hidden
+IEORG-0336,Counter-Unmanned Aircraft Systems Marketplace (C-UAS Marketplace),,,,unchanged,unchanged,hidden
+IEORG-0337,National Guard Bureau Innovation Hub,,,,unchanged,unchanged,hidden
+IEORG-0338,Assistant Secretary of War for Special Operations and Low-Intensity Conflict (ASW(SO/LIC)),,,,unchanged,unchanged,hidden
+IEORG-0339,Secretariat for Special Operations (SSO),,,,unchanged,unchanged,hidden
+IEORG-0340,Portfolio Acquisition Executive Marine Corps (PAE MC),,,,unchanged,unchanged,hidden
+IEORG-0341,Marine Corps Tactical Systems Support Activity (MCTSSA),,,8.946,added,added,reconciled RDT&E
+IEORG-0342,Marine Corps Expeditionary Energy Office (E2O),,,,unchanged,unchanged,hidden
+IEORG-0343,NGA Moonshot Labs,,,,unchanged,unchanged,hidden
+IEORG-0344,Space Reconnaissance Laboratory (SRL),,,,unchanged,unchanged,hidden
+IEORG-0345,AFRL Southwest,,,,unchanged,unchanged,hidden
+IEORG-0346,Air Force Research Laboratory Technology Transition Office (TTO),,,,unchanged,unchanged,hidden
+IEORG-0347,Air Force Sustainment Center Software Directorate (AFSC/SW),,,,unchanged,unchanged,hidden
+IEORG-0348,Kessel Run,,,25.338,added,added,reconciled RDT&E
+IEORG-0349,Project Arc,,,,unchanged,unchanged,hidden
+IEORG-0350,New Mexico Trade Alliance (NMTA),,,,unchanged,unchanged,hidden
+IEORG-0351,Pacific Region,,,,unchanged,unchanged,hidden
+IEORG-0352,University of Massachusetts Lowell Applied Research Corporation (UMLARC),,,,unchanged,unchanged,hidden
+IEORG-0353,Space Systems Command Commercial Space Office (COMSO),,,36.628,added,added,reconciled RDT&E
+IEORG-0354,United States Space Force Front Door (USSF Front Door),,,,unchanged,unchanged,hidden
+IEORG-0355,BMC3I TAP Lab,,,,unchanged,unchanged,hidden
+IEORG-0356,Texas Space Commission (TSC),,,,unchanged,unchanged,hidden
+IEORG-0357,U.S. Army Futures and Concepts Command (FCC),,,,unchanged,unchanged,hidden
+IEORG-0358,Joint Modernization Command (JMC),,,15.084,added,added,reconciled RDT&E
+IEORG-0359,Army Cyber Technology and Innovation Center (ArCTIC),,,2.138,added,added,reconciled RDT&E
+IEORG-0360,U.S. Army Communications-Electronics Command (CECOM),,,34.065,added,added,reconciled RDT&E
+IEORG-0361,Army Software & Innovation Center (ASIC),,,,unchanged,unchanged,hidden
+IEORG-0362,82nd Airborne Division,,,,unchanged,unchanged,hidden
+IEORG-0363,Airborne Innovation Lab (AIL),,,,unchanged,unchanged,hidden
+IEORG-0364,25th Infantry Division,,,,unchanged,unchanged,hidden
+IEORG-0365,Lightning Labs,,,,unchanged,unchanged,hidden
+IEORG-0366,Maneuver Battle Lab (MBL),,,0.256,added,added,reconciled RDT&E
+IEORG-0367,Maneuver Innovation Lab (MIL),,,,unchanged,unchanged,hidden
+IEORG-0368,10th Mountain Division (LI),,,,unchanged,unchanged,hidden
+IEORG-0369,Mountain Innovation Systems Lab,,,,unchanged,unchanged,hidden
+IEORG-0370,1st Cavalry Division,,,,unchanged,unchanged,hidden
+IEORG-0371,1st Cavalry Division Innovation Lab,,,,unchanged,unchanged,hidden
+IEORG-0372,Project Manager Cyber Warfare (PM CW),,,,unchanged,unchanged,hidden
+IEORG-0373,NIWC Atlantic Rapid Capabilities Office (RCO),,,,unchanged,unchanged,hidden
+IEORG-0374,National Security Plug and Play Consortium (NSPPC),,,,unchanged,unchanged,hidden
+IEORG-0375,Portfolio Acquisition Executive Robotics & Autonomous Systems (PAE RAS),,,,unchanged,unchanged,hidden
+IEORG-0376,Department of the Navy SBIR Experimentation Cell (DON-SEC),,,,unchanged,unchanged,hidden
+IEORG-0377,FLEETWERX,,,,unchanged,unchanged,hidden
+IEORG-0378,Innovation and Modernization Patuxent River (IMPAX),,,,unchanged,unchanged,hidden
+IEORG-0379,NAVY Launch,,,,unchanged,unchanged,hidden
+IEORG-0380,Electronics Manufacturing Center (EMC),,,,unchanged,unchanged,hidden
+IEORG-0381,"OrthoWorx, LLC.",,,,unchanged,unchanged,hidden
+IEORG-0382,Indiana University,,,,unchanged,unchanged,hidden
+IEORG-0383,State of Indiana,,,,unchanged,unchanged,hidden
+IEORG-0384,Radius Indiana,,,,unchanged,unchanged,hidden
+IEORG-0385,"Ivy Tech Community College-Bloomington, IN",,,,unchanged,unchanged,hidden
+IEORG-0386,Purdue University,,,,unchanged,unchanged,hidden
+IEORG-0387,Purdue Research Foundation,,,,unchanged,unchanged,hidden
+IEORG-0388,Indiana Research Consortium (IRC),,,,unchanged,unchanged,hidden
+IEORG-0389,"Amplify Bloomington (Dimension Mill, Inc.)",,,,unchanged,unchanged,hidden
+IEORG-0390,"Greater New Orleans Development Foundation, Inc. (GNODF)",,,,unchanged,unchanged,hidden
+IEORG-0391,Fairfax City Economic Development (FCED),,,,unchanged,unchanged,hidden
+IEORG-0392,Pike District Partnership (PDP),,,,unchanged,unchanged,hidden
+IEORG-0393,Polaris Tech Bridge,,,,unchanged,unchanged,hidden
+IEORG-0394,University of Rhode Island Research Foundation (URIRF),,,,unchanged,unchanged,hidden
+IEORG-0395,SENEDIA,,,,unchanged,unchanged,hidden
+IEORG-0396,VelocityTX,,,,unchanged,unchanged,hidden
+IEORG-0397,Henry M. Rowan College of Engineering,,,,unchanged,unchanged,hidden
+IEORG-0398,Naval Postgraduate School Foundation,,,,unchanged,unchanged,hidden
+IEORG-0399,Charles County Economic Development Department (EDD),,,,unchanged,unchanged,hidden
+IEORG-0400,University of Mary Washington (UMW),,,,unchanged,unchanged,hidden
+IEORG-0401,U.S. Army Cyber Command (ARCYBER),,,0.845,added,added,reconciled RDT&E
+IEORG-0402,Fires Innovation Science and Technology Accelerator Development Trust Authority (FISTA),,,,unchanged,unchanged,hidden
+IEORG-0403,University of Dayton Research Institute (UDRI),,,,unchanged,unchanged,hidden
+IEORG-0404,Metro State Applied Innovation Institute (MSAII),,,,unchanged,unchanged,hidden
+IEORG-0405,Regional Advanced Manufacturing Partnership of Maryland (RAMP MD),,,,unchanged,unchanged,hidden
+IEORG-0406,Maryland Economic Development Corporation (MEDCO),,,,unchanged,unchanged,hidden
+IEORG-0407,Kyl Institute for National Security (formerly UA-ARC),,,,unchanged,unchanged,hidden
+IEORG-0408,Information Technology Acquisition Advisory Council (IT-AAC),,,,unchanged,unchanged,hidden
+IEORG-0409,DARPAConnect,,,,unchanged,unchanged,hidden
+IEORG-0410,"Technology Transfer, Transition and Commercial Partnerships (T3CP)",1.768,1.768,1.768,unchanged,unchanged,reconciled RDT&E
+IEORG-0411,DIU Bridge Program,,,,unchanged,unchanged,hidden
+IEORG-0412,National Center for Manufacturing Sciences (NCMS),,,,unchanged,unchanged,hidden
+IEORG-0413,Maritime Advanced Technology Accelerator Consortium (MATAC),,,,unchanged,unchanged,hidden
+IEORG-0414,"Leveraging Enterprise Technologies for Holistic AI, Logistics, Integration, Transformation, and Yield (LETHALITY) Consortium",,,,unchanged,unchanged,hidden
+IEORG-0415,Department of the Air Force Tactical Exploitation of National Capabilities (DAF TENCAP) Consortium,,,,unchanged,unchanged,hidden
+IEORG-0416,Expeditionary Missions Consortium–Crane (EMC),,,,unchanged,unchanged,hidden
+IEORG-0417,Metals Affordability Initiative III (MAI III),,,,unchanged,unchanged,hidden
+IEORG-0418,Creative Defense Foundation (CDF),,,,unchanged,unchanged,hidden
+IEORG-0419,Defense Electronics Consortium (DEC),,,,unchanged,unchanged,hidden
+IEORG-0420,Joint Directed Energy Consortium (JDEC),,,,unchanged,unchanged,hidden
+IEORG-0421,AEDC Velocity Alliance,,,,unchanged,unchanged,hidden
+IEORG-0422,Army Contracting Command–Redstone Arsenal (ACC-RSA),,,,unchanged,unchanged,hidden
+IEORG-0423,Department of War Drone OTA Consortium,,,,unchanged,unchanged,hidden

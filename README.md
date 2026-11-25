@@ -1,5 +1,13 @@
 # DoW Innovation Ecosystem
 
+## Open a visualization
+
+| Visualization | What it shows |
+|---|---|
+| [Lifecycle visualization](https://michaelwmurray.github.io/DOW-Innovation-Ecosystem/lifecycle/) | Explore where organizations work across the technology lifecycle. |
+| [Funding treemap](https://michaelwmurray.github.io/DOW-Innovation-Ecosystem/treemap/) | Compare FY2026 funding across components and their organizations. |
+| [Nested circles](https://michaelwmurray.github.io/DOW-Innovation-Ecosystem/nested-circles/) | Explore how organizations fit within their parent organizations. |
+
 Created and maintained by **Michael Murray**.
 
 An 11-column organizational reference chart, formatted for one 17 x 11-inch landscape page, plus an interactive Kumu map.
@@ -39,3 +47,4 @@ The layout is tailored to this hierarchy. Changes to the source can require manu
 ## Rights and attribution
 
 No open-source license has been selected for this project's original code or chart. Public visibility alone does not grant a general reuse license. Bundled DejaVu fonts retain their included license. Organization names, logos, and other third-party material retain their respective rights and are not licensed by this repository. Display does not imply endorsement.
+

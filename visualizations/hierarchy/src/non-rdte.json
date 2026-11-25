@@ -1,0 +1,24 @@
+{
+  "procurement": {
+    "IEORG-0334": {
+      "amount": 1355.5,
+      "basis": "FY2027 Procurement, Defense-Wide Exhibit P-5, FY2026 spend plan",
+      "components": [
+        {
+          "label": "Discretionary",
+          "amount": 325.5
+        },
+        {
+          "label": "Mandatory reconciliation",
+          "amount": 1030
+        }
+      ]
+    }
+  },
+  "authority": {
+    "IEORG-0294": {
+      "amount": 210000,
+      "basis": "FY2027 Secretary of Defense written posture statement, House Appropriations, 12 May 2026, p. 13. https://docs.house.gov/meetings/AP/AP02/20260512/119264/HHRG-119-AP02-Wstate-HegsethP-20260512.pdf"
+    }
+  }
+}

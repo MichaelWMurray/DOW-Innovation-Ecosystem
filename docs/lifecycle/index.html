@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content="Innovation Ecosystem: source-grounded FY2026 RDT&E funding bubble prototype."/><title>Innovation Ecosystem · RDT&E Funding Explorer</title>  <script type="module">
+try {
+  const response = await fetch('./data.json.gz');
+  if (!response.ok) throw new Error('Dataset request failed (' + response.status + ')');
+  const stream = response.body.pipeThrough(new DecompressionStream('gzip'));
+  document.getElementById('dataset').textContent = await new Response(stream).text();
+  await import('./assets/index-BiX2Lw27.js');
+} catch (error) {
+  document.getElementById('root').textContent = 'Unable to open the lifecycle visualization. ' + error.message;
+}
+</script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CzdxFF5N.css">
+</head><body><div id="root"></div><script id="dataset" type="application/json"></script></body></html>
