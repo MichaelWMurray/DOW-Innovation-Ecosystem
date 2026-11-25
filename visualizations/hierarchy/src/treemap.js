@@ -15,6 +15,8 @@ const ADDED_CSS="/* Scope every rule to the independent treemap so the existing 
   const ORIGINAL = snapshot;
   const ORIGINAL_LOGOS = logos;
   const EXCLUDED_ROOT = 'IEORG-0240';
+  const OSC_CREDIT_SUBSIDY = 1500;
+  const OSC_CREDIT_BASIS = 'Credit subsidy appropriation under P.L.119-21 §§20004(d),20005(b), documented in Non-RDT&E Funding; separate from FY2026 selected RDT&E and cumulative lending authority';
   const COMPONENT_COLORS = {
     'Air Force':'#3970b7', 'Army':'#33977b', 'Navy':'#3c92bc', 'Marine Corps':'#ab7443',
     'Space Force':'#7867b2', 'Combatant Command':'#b56972', 'USW(R&E)':'#8866a9',
@@ -73,13 +75,14 @@ const ADDED_CSS="/* Scope every rule to the independent treemap so the existing 
       const f=funding.get(org.id)||{};
       const workbookDirect=Math.max(0,Number(f.amountMillionsDecimal)||0);
       const extra=nonRdte.procurement[org.id];
-      const identifiedDirect=workbookDirect+(extra?.amount??0);
+      const creditSubsidy=org.id==='IEORG-0294'?OSC_CREDIT_SUBSIDY:0;
+      const identifiedDirect=workbookDirect+(extra?.amount??0)+creditSubsidy;
       const lending=nonRdte.authority[org.id]?.amount;
       const referenceDirect=getReferenceFunding(org.id);
       const awardAmount=getAwardEvidence(org.id).reduce((sum,award)=>sum+award.amount,0);
       const direct=((state.showLending?lending:undefined) ?? identifiedDirect)+referenceDirect;
-      return {...org, type:org.type && org.type !== 'Secretary of War' ? org.type : 'Unclassified', direct, identifiedDirect, referenceDirect, awardAmount,
-        ba:f.ba||null, evidence:extra?extra.basis:(f.scope||''),
+      return {...org, type:org.type && org.type !== 'Secretary of War' ? org.type : 'Unclassified', direct, identifiedDirect, referenceDirect, awardAmount, creditSubsidy,
+        ba:f.ba||null, evidence:creditSubsidy?OSC_CREDIT_BASIS:extra?extra.basis:(f.scope||''),
         fundingSource:extra?FUNDING_URL:null, fundingOrigin:extra?'Non-RDT&E Funding workbook tab':'Funding workbook',
         isSupplemental:Boolean(extra), overlapNote:f.overlapNote||'', children:[], parent:null, total:0};
     });
@@ -245,7 +248,7 @@ const ADDED_CSS="/* Scope every rule to the independent treemap so the existing 
       <details class="tm-org-legend"><summary>Org Type border legend</summary><ul id="tm-org-legend"></ul></details>
       <main class="tm-layout"><section class="tm-funded"><div class="tm-section-head"><span id="tm-funded-label">Funded hierarchy</span><span id="tm-funded-count"></span></div><div class="tm-funded-jumpbar"><label for="tm-funded-jump">Find a funded organization</label><div class="tm-funded-picker"><input id="tm-funded-jump" type="search" autocomplete="off" placeholder="Search or select a funded organization…" aria-controls="tm-funded-options"/><div id="tm-funded-options" aria-label="Matching funded organizations" hidden></div></div><button type="button" id="tm-small-toggle" aria-pressed="false" title="Inspect the small rectangles as readable equal-size cards, without changing the proportional main chart">🔍 Enlarge small tiles</button></div><div class="tm-small-links" id="tm-small-links" hidden></div><div class="tm-map-tools" role="group" aria-label="Treemap zoom"><button type="button" id="tm-zoom-in" aria-label="Zoom in on treemap">+</button><button type="button" id="tm-zoom-out" aria-label="Zoom out of treemap">−</button><button type="button" id="tm-zoom-fit">Fit</button><span id="tm-zoom-level" role="status">100%</span></div><div id="tm-canvas" class="tm-canvas" aria-label="Organization treemap"></div><p id="tm-award-key" class="tm-hint" hidden>Dashed tiles show reported award evidence. Their areas use space within the parent amount and their dollars stay outside funding totals.</p><div id="tm-small-explorer" class="tm-small-explorer" aria-label="Enlarged small organizations, not proportional to funding" hidden></div><div id="tm-small-funded" class="tm-small-funded" hidden></div><div class="tm-hint">Scroll over the chart, pinch, or use + and − to zoom. Drag the zoomed map to pan, and select Fit to return to the full map. Click a parent to open its branch. Enlarge small tiles shows readable cards. Breadcrumbs return to parent levels.</div></section><aside class="tm-unfunded"><div class="tm-section-head"><span id="tm-unfunded-label">No funding identified</span><span id="tm-unfunded-count"></span></div><p id="tm-unfunded-scope">Same hierarchy scope · equal-size tiles · dashed outlines</p><div id="tm-unfunded-grid" class="tm-unfunded-grid"></div></aside></main>
       <div id="tm-searchresults" class="tm-searchresults" hidden></div><div id="tm-tooltip" role="tooltip" hidden></div>
-      <dialog id="tm-settings"><div class="tm-modal"><header><h2>Funding sources</h2><button type="button" id="tm-close" aria-label="Close">×</button></header><p>The treemap sizes tiles using identified funding and documented reference-only awards. Reference awards contribute to chart totals only. Gross totals can include shared funding more than once. The circle view applies overlap rules within each branch.</p><p>APFIT uses the workbook’s FY2026 procurement spend plan. The lending authority toggle sizes OSC using its cumulative lending authority. Turn it off to size OSC by FY2026 identified funding.</p><p><a href="${MASTER_URL}" target="_blank" rel="noopener">Master organizations ↗</a> · <a href="${FUNDING_URL}" target="_blank" rel="noopener">FY2026 workbook ↗</a></p></div></dialog>`;
+      <dialog id="tm-settings"><div class="tm-modal"><header><h2>Funding sources</h2><button type="button" id="tm-close" aria-label="Close">×</button></header><p>The treemap sizes tiles using identified funding and documented reference-only awards. Reference awards contribute to chart totals only. Gross totals can include shared funding more than once. The circle view applies overlap rules within each branch.</p><p>APFIT uses the workbook’s FY2026 reported procurement spend plan. OSC includes its $1.5B credit subsidy appropriation under P.L.119-21 plus selected RDT&E. The lending authority toggle sizes OSC using its cumulative lending authority. Turn it off to size OSC by FY2026 identified funding.</p><p><a href="${MASTER_URL}" target="_blank" rel="noopener">Master organizations ↗</a> · <a href="${FUNDING_URL}" target="_blank" rel="noopener">FY2026 workbook ↗</a></p></div></dialog>`;
     document.body.appendChild(panel);
     const select=$('#tm-component');
     Object.keys(COMPONENT_COLORS).filter(k=>state.nodes.some(n=>n.type===k)).sort().forEach(c=>select.add(new Option(c,c)));
@@ -371,14 +374,17 @@ const ADDED_CSS="/* Scope every rule to the independent treemap so the existing 
     $('#tm-context').textContent=focusOrg?focusOrg.label:state.component;
     const hero=$('#tm-hero-logo');const source=focusOrg?logo(focusOrg):'';
     hero.hidden=!source;if(source)hero.src=source;else hero.removeAttribute('src');
-    const supplementalIncluded=state.nodes.some(n=>n.isSupplemental&&componentMatch(n)&&
+    const supplementalIncluded=state.nodes.some(n=>n.id==='IEORG-0334'&&componentMatch(n)&&
       (!focusOrg||n.id===focusOrg.id||withinSelectedParent(n,focusOrg)));
-    const provenance=supplementalIncluded?' · includes APFIT’s '+formatPrecise(nonRdte.procurement['IEORG-0334'].amount)+' FY2026 procurement spend plan':'';
+    const provenance=supplementalIncluded?' · includes APFIT’s '+formatPrecise(nonRdte.procurement['IEORG-0334'].amount)+' FY2026 reported procurement spend plan':'';
     $('#tm-totalsub').textContent=(focusOrg?
-      `${formatPrecise(focusOrg.identifiedDirect)} FY2026 direct funding · ${fmt(total)} chart total including descendants`:
+      `${formatPrecise(focusOrg.identifiedDirect)} ${focusOrg.creditSubsidy?'direct funding across appropriation bases':'FY2026 direct funding'} · ${fmt(total)} chart total including descendants`:
       `${direct.length} organizations with direct amounts · ${state.nodes.length+1} in the master inventory · amounts in USD`)+provenance;
     if(focusOrg?.referenceDirect)$('#tm-totalsub').textContent+=' · '+formatReference(focusOrg.referenceDirect)+' reference-only award funding';
     if(referenceIncluded)$('#tm-totalsub').textContent+=' · reference awards are included in chart totals only';
+    const creditIncluded=state.nodes.some(n=>n.creditSubsidy>0&&componentMatch(n)&&
+      (!focusOrg||n.id===focusOrg.id||withinSelectedParent(n,focusOrg)));
+    if(creditIncluded&&!lendingIncluded)$('#tm-totalsub').textContent+=' · includes OSC’s $1,500M credit subsidy appropriation under P.L.119-21 (separate appropriation basis)';
     const authority=focusOrg&&nonRdte.authority[focusOrg.id];
     if(authority)$('#tm-totalsub').textContent+=' · approx. $'+(authority.amount/1000)+'B cumulative lending authority as of May 2026 (separate)';
     const items=scopedNodes();
@@ -606,7 +612,7 @@ const ADDED_CSS="/* Scope every rule to the independent treemap so the existing 
     const tile=e.target.closest('.tm-tile');const tool=$('#tm-tooltip');if(!tile||!tile.dataset.tip){tool.hidden=true;return}
     const n=state.byId.get(tile.dataset.tip);if(!n){tool.hidden=true;return}
     if(tile.dataset.awardId){tool.hidden=true;return;}
-    tool.innerHTML=`<strong>${enc(n.label)}</strong><small>${enc(orgTypeName(n))}</small><small>${enc(parentsPath(n.id).map(x=>x.acronym||x.label).join(' › '))}</small><div><span>FY2026 direct funding</span><b>${fmt(n.identifiedDirect)}</b></div>${n.referenceDirect?`<div><span>Reference-only awards</span><b>${formatReference(n.referenceDirect)}</b></div>`:''}<div><span>Chart total including descendants</span><b>${fmt(n.total)}</b></div><small>${n.evidence?enc(n.evidence):'Funding scope not identified'}</small>`;
+    tool.innerHTML=`<strong>${enc(n.label)}</strong><small>${enc(orgTypeName(n))}</small><small>${enc(parentsPath(n.id).map(x=>x.acronym||x.label).join(' › '))}</small><div><span>${n.creditSubsidy?'Direct funding across appropriation bases':'FY2026 direct funding'}</span><b>${fmt(n.identifiedDirect)}</b></div>${n.referenceDirect?`<div><span>Reference-only awards</span><b>${formatReference(n.referenceDirect)}</b></div>`:''}<div><span>Chart total including descendants</span><b>${fmt(n.total)}</b></div><small>${n.evidence?enc(n.evidence):'Funding scope not identified'}</small>`;
     tool.hidden=false;
     const vw=window.innerWidth,vh=window.innerHeight;
     tool.style.left=Math.max(8,Math.min(e.clientX+18,vw-330))+'px';
