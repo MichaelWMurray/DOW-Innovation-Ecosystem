@@ -1,1 +1,47 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DoW Innovation Ecosystem</title><main><h1>DoW Innovation Ecosystem</h1><ul><li><a href="lifecycle/">Lifecycle visualization</a></li><li><a href="treemap/">Funding treemap</a></li><li><a href="nested-circles/">Nested circles</a></li></ul></main></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DoW Innovation Ecosystem | Charts and maps</title>
+<meta name="description" content="Explore the DoW Innovation Ecosystem through an organizational chart, relationship map and interactive funding visualizations.">
+<style>
+*{box-sizing:border-box}
+body{margin:0;color:#172e3c;background:#f6f5ef;font:16px/1.55 "Source Sans 3",system-ui,sans-serif}
+main,footer{width:min(1120px,92%);margin:auto}
+header{background:#102d3a;color:white}
+.hero{width:min(1120px,92%);margin:auto;display:grid;grid-template-columns:1fr 43%;gap:7%;align-items:center;padding:clamp(32px,6vw,76px) 0}
+h1,h2,h3,p{margin:0}h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;font-weight:normal;line-height:1.08}
+h1{font-size:clamp(40px,5.6vw,80px);letter-spacing:-.045em}
+.hero p{color:#d1dfe0;max-width:46ch;margin:18px 0 24px}
+a{color:inherit}a:focus-visible{outline:3px solid #de842e;outline-offset:5px}
+.button{display:inline-block;background:#fae0ad;color:#142e39;text-decoration:none;font-weight:700;padding:12px 18px;border-radius:4px}
+.button:hover{background:#fff0cc}
+figure{margin:0}figure img{display:block;width:100%;height:auto;border:8px solid white;box-shadow:0 14px 35px #061c2588}
+figcaption{margin-top:12px;color:#cbdbdc;font-size:.79rem}
+main{padding:40px 0 46px}h2{font-size:clamp(30px,3.5vw,46px);letter-spacing:-.035em;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:center;text-decoration:none;border:1px solid #cbd2cc;background:#fffefa;padding:26px;border-radius:6px}
+.card:hover{background:white;border-color:#487575;box-shadow:0 3px 12px #14383812}
+h3{font-size:26px}.card p{color:#445b63;font-size:.94rem;margin-top:7px}.arrow{font-size:24px;color:#41696b}
+.icon{width:64px;height:64px;position:relative;display:block;background:#e5eeea;border-radius:8px;color:#206761}
+.icon i{display:block;position:absolute;background:currentColor}
+.map i{width:12px;height:12px;border-radius:50%}.map i:nth-child(1){left:10px;top:32px}.map i:nth-child(2){left:34px;top:12px}.map i:nth-child(3){left:42px;top:42px}.map:before,.map:after{content:"";position:absolute;width:32px;height:2px;background:currentColor;left:15px;top:27px;transform:rotate(-40deg)}.map:after{top:42px;transform:rotate(18deg)}
+.circles{background:#ece8ef;color:#795884}.circles i{border-radius:50%;border:2px solid currentColor;background:transparent}.circles i:first-child{inset:8px}.circles i:nth-child(2){inset:17px 26px 26px 15px}.circles i:last-child{inset:30px 15px 15px 33px}
+.tree{background:#f8eada;color:#ab693b}.tree i:first-child{inset:12px 34px 12px 11px}.tree i:nth-child(2){inset:12px 11px 30px 33px}.tree i:last-child{inset:37px 11px 12px 33px;opacity:.65}
+.life{background:#e6edf5;color:#486d96}.life i{border-radius:50%}.life i:first-child{width:10px;height:10px;left:8px;bottom:12px}.life i:nth-child(2){width:16px;height:16px;left:22px;bottom:21px}.life i:last-child{width:20px;height:20px;right:5px;top:7px}
+footer{border-top:1px solid #cbd2cc;padding:18px 0 28px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:#50636a;font-size:.85rem}
+@media(max-width:760px){.hero{grid-template-columns:1fr;gap:28px}.hero figure{max-width:460px}.grid{grid-template-columns:1fr}.card{padding:18px;gap:15px}}
+</style>
+</head><body>
+<header><div class="hero"><div><h1>DoW Innovation Ecosystem</h1>
+<p>See how defense innovation organizations fit together, where they work across the technology lifecycle, and how funding is distributed.</p>
+<a class="button" href="https://github.com/MichaelWMurray/DOW-Innovation-Ecosystem/releases/download/v2026.09.28/dow_innovation_ecosystem_september_2026.pdf">Download the ecosystem chart (PDF)</a></div>
+<figure><img src="ecosystem-chart.webp" width="850" height="550" alt="Preview of the organizational chart with its eleven color-coded columns."><figcaption>Innovation Ecosystem Chart · September 2026 · 17 × 11 in.</figcaption></figure></div></header>
+<main><h2>Interactive maps and charts</h2><div class="grid">
+<a class="card" href="https://kumu.io/mwmurray/innovationecosystem#innovation-ecosystem"><span class="icon map" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Kumu interactive map</h3><p>Trace relationships between organizations across the ecosystem.</p></div><span class="arrow" aria-hidden="true">→</span></a>
+<a class="card" href="nested-circles/"><span class="icon circles" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Nested circles</h3><p>Explore components and see which organizations sit inside each parent.</p></div><span class="arrow" aria-hidden="true">→</span></a>
+<a class="card" href="treemap/"><span class="icon tree" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Funding treemap</h3><p>Compare FY2026 funding across components and drill into their organizations.</p></div><span class="arrow" aria-hidden="true">→</span></a>
+<a class="card" href="lifecycle/"><span class="icon life" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Lifecycle visualization</h3><p>Follow organizations from early research through production and sustainment.</p></div><span class="arrow" aria-hidden="true">→</span></a>
+</div></main><footer><span>Created and maintained by Michael Murray</span><span>Independent reference · Unofficial</span></footer>
+</body></html>
