@@ -4,7 +4,7 @@ try {
   if (!response.ok) throw new Error('Dataset request failed (' + response.status + ')');
   const stream = response.body.pipeThrough(new DecompressionStream('gzip'));
   document.getElementById('dataset').textContent = await new Response(stream).text();
-  await import('./assets/index-BiX2Lw27.js');
+  await import('./assets/index-7jwAgNGA.js');
 } catch (error) {
   document.getElementById('root').textContent = 'Unable to open the lifecycle visualization. ' + error.message;
 }

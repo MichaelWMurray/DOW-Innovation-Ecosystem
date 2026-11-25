@@ -184,7 +184,12 @@ test('the reconciled and legacy views retain independent scopes and geometry',()
  const positions=layout(view);
  assert.equal(positions.length,125);
  assert.equal(positions.filter(n=>n.reconciledFunding?.amount>0).length,124);
- assert.equal(positions.find(n=>n.acronym==='APFIT').displaySegments[10],92.193);
+ const apfit=positions.find(n=>n.acronym==='APFIT');
+ assert.equal(apfit.displaySegments[10],1355.5);
+ assert.equal(apfit.displayAmount,1355.5);
+ assert.equal(apfit.supplementalRecords[0].components.reduce((sum,c)=>sum+c.amount,0),1355.5);
+ assert.equal(apfit.position,6);
+ assert.equal(apfit.reconciledFunding.amount,null);
  assert.equal(positions.find(n=>n.acronym==='OSC').displaySegments[9],210000);
  const osc=positions.find(n=>n.acronym==='OSC');
  assert.equal(osc.r,170);assert.equal(osc.x,xScale(7));
