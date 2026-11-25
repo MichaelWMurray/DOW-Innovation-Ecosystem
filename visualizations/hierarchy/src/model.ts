@@ -42,15 +42,20 @@ export const rollups = new Map(Object.entries(rollupData));
 export const procurement = new Map(Object.entries(nonRdte.procurement));
 export const lendingAuthority = new Map(Object.entries(nonRdte.authority));
 export const procurementByBranch = new Map<string, number>();
+export const OSC_CREDIT_SUBSIDY = 1500;
+export const creditSubsidyByBranch = new Map<string, number>();
 const fallbackArea = 8;
 function packLayout(root: Circle, showLending: boolean) {
   root.eachAfter(node => {
     const procurementTotal = (procurement.get(node.data.id)?.amount ?? 0) +
       (node.children ?? []).reduce((sum, child) => sum + (procurementByBranch.get(child.data.id) ?? 0), 0);
     procurementByBranch.set(node.data.id, procurementTotal);
+    const creditSubsidy = (node.data.id === 'IEORG-0294' ? OSC_CREDIT_SUBSIDY : 0) +
+      (node.children ?? []).reduce((sum, child) => sum + (creditSubsidyByBranch.get(child.data.id) ?? 0), 0);
+    creditSubsidyByBranch.set(node.data.id, creditSubsidy);
     const rdte = rollups.get(node.data.id)?.amountMillions ?? amounts.get(node.data.id) ?? 0;
     const authority = showLending ? lendingAuthority.get(node.data.id)?.amount : undefined;
-    const ownRadius = Math.sqrt((authority ?? (rdte + procurementTotal)) || fallbackArea);
+    const ownRadius = Math.sqrt((authority ?? (rdte + procurementTotal + creditSubsidy)) || fallbackArea);
     if (!node.children?.length) { node.r=ownRadius; node.x=0; node.y=0; return; }
     const gap=node.depth===0 ? Math.max(6,Math.max(...node.children.map(child=>child.r))*.065) : 1.2;
     const packed=node.children.map(child => ({child,x:0,y:0,r:child.r+gap}));
@@ -100,6 +105,7 @@ export function applyWorkbookData(next: ReturnType<typeof validateWorkbook>) {
   byId.clear();
   for (const node of layout.descendants()) byId.set(node.data.id, node);
   procurementByBranch.clear();
+  creditSubsidyByBranch.clear();
   packLayout(layout, false);
   packLayout(lendingLayout, true);
   components = componentOptions();

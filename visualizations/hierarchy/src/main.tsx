@@ -1,7 +1,7 @@
 import {getWorkbookRefresh, refreshWorkbook, subscribeWorkbookRefresh} from './workbook-refresh';
 import { lendingViewEnabled, subscribeToLendingView, toggleLendingView } from './lending-view';
 import './treemap.js';
-import {rollups, procurement, procurementByBranch, lendingAuthority} from './model';
+import {rollups, procurement, procurementByBranch, lendingAuthority, creditSubsidyByBranch} from './model';
 import approvedActivityData from './approved-activities.json';
 import React, {useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore} from 'react';
 import {createRoot} from 'react-dom/client';
@@ -62,6 +62,7 @@ function App() {
   const spendPlan = org && procurement.get(org.id);
   const branchProcurement = org && procurementByBranch.get(org.id);
   const authority = org && lendingAuthority.get(org.id);
+  const branchCreditSubsidy = org && creditSubsidyByBranch.get(org.id);
   const isFiltered = !!(view.components.length || view.types.length);
   const matches = new Set(organizations.filter(record => (
     (!view.components.length || view.components.includes(record.type ?? 'Unspecified')) &&
@@ -181,7 +182,7 @@ function App() {
     const direct = money.get(id);
     const rdte = rollup?.amountMillions ??
       (direct?.status === 'supported' ? Number(direct.amountMillionsDecimal) : 0);
-    const amount = lending?.amount ?? (rdte + (procurementByBranch.get(id) ?? 0));
+    const amount = lending?.amount ?? (rdte + (procurementByBranch.get(id) ?? 0) + (creditSubsidyByBranch.get(id) ?? 0));
     if (amount > 0) continue;
     const text = name;
     const w = text.length * (top ? 8 : 7) + 14;
@@ -297,11 +298,12 @@ function App() {
                 const amount = money.get(id);
                 const branchFunding = rollups.get(id);
                 const procurementAmount = procurementByBranch.get(id) ?? 0;
-                const quantified = procurementAmount > 0 || !!branchFunding || (amount?.status==='supported' && Number(amount.amountMillionsDecimal)>0);
+                const creditSubsidy = creditSubsidyByBranch.get(id) ?? 0;
+                const quantified = creditSubsidy > 0 || procurementAmount > 0 || !!branchFunding || (amount?.status==='supported' && Number(amount.amountMillionsDecimal)>0);
                 const muted = isFiltered && !context.has(id);
                 const href = logos[id] && !failedLogos.has(id) ? logos[id] : placeholderLogo(node);
                 const lending = showLending ? lendingAuthority.get(id) : undefined;
-                const displayAmount = lending ? '$'+(lending.amount/1000)+'B' : branchFunding ? formatRollup(branchFunding.amountMillions, branchFunding.ambiguousPools) + ' RDT&E hierarchy scope' : amount?.status==='supported' ? '$'+Number(amount!.amountMillionsDecimal).toLocaleString(undefined,{maximumFractionDigits:3})+'M' :
+                const displayAmount = lending ? '$'+(lending.amount/1000)+'B' : creditSubsidy ? formatRollup((branchFunding?.amountMillions ?? Number(amount?.amountMillionsDecimal ?? 0)) + creditSubsidy, branchFunding?.ambiguousPools ?? 0) + ' including credit subsidy' : branchFunding ? formatRollup(branchFunding.amountMillions, branchFunding.ambiguousPools) + ' RDT&E hierarchy scope' : amount?.status==='supported' ? '$'+Number(amount!.amountMillionsDecimal).toLocaleString(undefined,{maximumFractionDigits:3})+'M' :
                   amount?.status==='supported' ? '$0M' : 'Scope unavailable';
                 return <g key={id} opacity={muted ? .18 : 1} className="logoBubble"
                   onClick={event => {event.stopPropagation();select(byId.get(id)!);}} onDoubleClick={event=>{event.stopPropagation();go(byId.get(id)!);}}>
@@ -313,14 +315,14 @@ function App() {
                   <circle cx={x} cy={y} r={r} fill="none" stroke={view.selected===id?'#14243a':color(node)[1]}
                     strokeWidth={view.selected===id?3:1.7} vectorEffect="non-scaling-stroke"
                     strokeDasharray={quantified?undefined:'4 3'}/>
-                  <title>{node.data.label+' · '+(procurementAmount ? formatRollup(procurementAmount, 0)+' procurement spend plan'+(branchFunding ? ' · '+displayAmount : '') : displayAmount)+(node.children?' · Zoom to organization':'')}</title>
+                  <title>{node.data.label+' · '+(procurementAmount ? formatRollup(procurementAmount, 0)+' procurement spend plan'+(branchFunding || creditSubsidy ? ' · '+displayAmount : '') : displayAmount)+(node.children?' · Zoom to organization':'')}</title>
                 </g>;
               })}
             </g>
             <g pointerEvents="none">{visibleLabels.map(l=><g key={l.id} transform={`translate(${l.x} ${l.y})`}><rect x={-l.w/2} y="-3" width={l.w} height="23" rx="4" fill="white" fillOpacity=".9"/><text y="13" textAnchor="middle" className={l.top?'componentLabel':'leafLabel'}>{l.text}</text></g>)}</g>
           </svg>
         </div>
-        <footer>{showLending && <strong>OSC size uses cumulative lending authority. </strong>}All organizations remain nested and visible. Circle area reflects identified FY2026 funding, including the APFIT procurement spend plan. Parent circles expand when needed to contain children. Dashed circles indicate missing scope or zero. Pinch or scroll to zoom · drag to pan · click for details · double-click to zoom.</footer>
+        <footer>{showLending && <strong>OSC size uses cumulative lending authority. </strong>}All organizations remain nested and visible. Circle area reflects identified FY2026 funding, including the APFIT procurement spend plan and OSC credit subsidy appropriation. Parent circles expand when needed to contain children. Dashed circles indicate missing scope or zero. Pinch or scroll to zoom · drag to pan · click for details · double-click to zoom.</footer>
         {focus.data.id.startsWith('view:') && focus!==layout && <div className="groupNote">Display grouping only. It does not indicate an organizational relationship.</div>}
         <span className="sr" aria-live="polite">{notice || (org ? 'Selected '+org.label : focus.data.label)}</span>
         {notice && <div className="notice">{notice}<button aria-label="Dismiss notice" onClick={() => setNotice('')}>×</button></div>}
@@ -347,6 +349,12 @@ function App() {
               <div className="kicker">FY2026 PROCUREMENT SPEND PLAN</div>
               <strong>{formatRollup(branchProcurement, 0)}</strong>
               {spendPlan ? <p>{spendPlan.components.map(c => c.label + ' ' + formatRollup(c.amount, 0)).join(' · ')}. {spendPlan.basis}.</p> : <p>Includes APFIT within this branch.</p>}
+            </>}
+            {!!branchCreditSubsidy && <>
+              <div className="kicker">CREDIT SUBSIDY APPROPRIATION</div>
+              <strong>{formatRollup(branchCreditSubsidy, 0)}</strong>
+              <p>OSC credit subsidy under P.L.119-21, separate from FY2026 RDT&amp;E and cumulative lending authority.</p>
+              {authority && <p>Funding with lending authority off: {formatRollup(branchCreditSubsidy + Number(amount?.amountMillionsDecimal ?? 0), 0)}.</p>}
             </>}
             {authority && <>
               <div className="kicker">CUMULATIVE LENDING AUTHORITY</div>
