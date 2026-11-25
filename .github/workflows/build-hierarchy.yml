@@ -43,6 +43,18 @@ jobs:
             git commit -m "Build treemap and nested-circle assets"
             git push
           fi
+      - name: Sync chart files to the Pages serving branch
+        run: |
+          git fetch origin gh-pages
+          git worktree add --detach ../published FETCH_HEAD
+          cp -a docs/shared/assets/. ../published/shared/assets/
+          cp docs/treemap/index.html ../published/treemap/index.html
+          cp docs/nested-circles/index.html ../published/nested-circles/index.html
+          git -C ../published add shared/assets treemap/index.html nested-circles/index.html
+          if ! git -C ../published diff --cached --quiet; then
+            git -C ../published commit -m "Publish updated hierarchy visualizations"
+            git -C ../published push origin HEAD:gh-pages
+          fi
       - name: Publish generated chart files to GitHub Pages
         env:
           GH_TOKEN: ${{ github.token }}
