@@ -32,13 +32,19 @@ h3{font-size:26px}.card p{color:#445b63;font-size:.94rem;margin-top:7px}.arrow{f
 .life{background:#e6edf5;color:#486d96}.life i{border-radius:50%}.life i:first-child{width:10px;height:10px;left:8px;bottom:12px}.life i:nth-child(2){width:16px;height:16px;left:22px;bottom:21px}.life i:last-child{width:20px;height:20px;right:5px;top:7px}
 footer{border-top:1px solid #cbd2cc;padding:18px 0 28px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:#50636a;font-size:.85rem}
 @media(max-width:760px){.hero{grid-template-columns:1fr;gap:28px}.hero figure{max-width:460px}.grid{grid-template-columns:1fr}.card{padding:18px;gap:15px}}
+.byline{width:min(1120px,92%);margin:auto;display:flex;justify-content:flex-end;padding-top:18px}
+.byline a{display:inline-flex;align-items:center;gap:12px;text-align:right;text-decoration:none;line-height:1.4}
+.byline small{display:block;color:#fae0ad}.byline a:hover small{text-decoration:underline}
+.byline img{border-radius:50%;object-fit:cover;border:1px solid #83949b}
+.hero{padding-top:clamp(18px,3vw,40px)}
+.funding-note{max-width:78ch;color:#445b63;margin:-6px 0 22px}
 </style>
 </head><body>
-<header><div class="hero"><div><h1>DoW Innovation Ecosystem</h1>
-<p>See how defense innovation organizations fit together, where they work across the technology lifecycle, and how funding is distributed.</p>
+<header><div class="byline"><a href="https://www.linkedin.com/in/michael-w-murray"><span><strong>Michael Murray</strong><small>LinkedIn ↗</small></span><img src="michael-murray.jpg" width="60" height="60" alt=""></a></div><div class="hero"><div><h1>DoW Innovation Ecosystem</h1>
+<p>See how DoW innovation organizations fit together, where they work across the technology lifecycle, and how funding is distributed.</p>
 <a class="button" href="https://github.com/MichaelWMurray/DOW-Innovation-Ecosystem/releases/download/v2026.09.28/dow_innovation_ecosystem_september_2026.pdf">Download the ecosystem chart (PDF)</a></div>
 <figure><img src="ecosystem-chart.webp" width="850" height="550" alt="Preview of the organizational chart with its eleven color-coded columns."><figcaption>Innovation Ecosystem Chart · September 2026 · 17 × 11 in.</figcaption></figure></div></header>
-<main><h2>Interactive maps and charts</h2><div class="grid">
+<main><h2>Interactive maps and charts</h2><p class="funding-note">Funding figures are estimates that help illustrate how DoW innovation funding is distributed. They cover only part of the ecosystem’s funding.</p><div class="grid">
 <a class="card" href="https://kumu.io/mwmurray/innovationecosystem#innovation-ecosystem"><span class="icon map" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Kumu interactive map</h3><p>Trace relationships between organizations across the ecosystem.</p></div><span class="arrow" aria-hidden="true">→</span></a>
 <a class="card" href="nested-circles/"><span class="icon circles" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Nested circles</h3><p>Explore components and see which organizations sit inside each parent.</p></div><span class="arrow" aria-hidden="true">→</span></a>
 <a class="card" href="treemap/"><span class="icon tree" aria-hidden="true"><i></i><i></i><i></i></span><div><h3>Funding treemap</h3><p>Compare FY2026 funding across components and drill into their organizations.</p></div><span class="arrow" aria-hidden="true">→</span></a>
